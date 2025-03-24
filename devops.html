@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Usman - Sci-Fi Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            background: radial-gradient(circle, #000 40%, #002244 100%);
+            color: #00ffea;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px;
+            box-shadow: 0 0 20px #00ffea;
+            text-transform: uppercase;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2rem;
+            text-shadow: 0 0 15px #00ffea;
+        }
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 270px;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.9);
+            box-shadow: 0 0 20px #00ffea;
+            transform: translateX(-100%);
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .sidebar.show {
+            transform: translateX(0);
+        }
+        .sidebar a {
+            display: block;
+            color: #00ffea;
+            text-decoration: none;
+            padding: 15px;
+            margin: 10px 20px;
+            border: 2px solid #00ffea;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            background: #00ffea;
+            color: #000;
+            box-shadow: 0 0 10px #00ffea;
+        }
+        .menu-btn {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #00ffea;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding-top: 80px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 10px;
+            box-shadow: 0 0 15px #00ffea;
+        }
+        .footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #00ffea; }
+            50% { text-shadow: 0 0 25px #00ffea; }
+            100% { text-shadow: 0 0 10px #00ffea; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h1, .btn {
+            animation: glow 1.5s infinite alternate;
+        }
+        .btn {
+            background: transparent;
+            border: 2px solid #00ffea;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: #00ffea;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 10px;
+        }
+        .btn:hover {
+            background: #00ffea;
+            color: #000;
+            box-shadow: 0 0 15px #00ffea;
+        }
+    </style>
+    <script>
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('show');
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <span class="menu-btn" onclick="toggleSidebar()">☰</span>
+        <h1>Muhammad Usman</h1>
+    </div>
+    <div class="sidebar">
+        <a href="#">Home</a>
+        <a href="#">Projects</a>
+        <a href="#">Skills</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="container">
+        <p>BScs Student | Tech Enthusiast | AI & Web Developer</p>
+        <div class="projects">
+            <h2>My Projects</h2>
+            <p>🔹 <strong>StaffMate:</strong> AI-powered University Staff Management App</p>
+            <p>🔹 <strong>AI Silent Communicator:</strong> Lip-reading & Speech Assist App</p>
+            <p>🔹 <strong>FixIt Pakistan:</strong> AI-Powered Public Issue Reporting System</p>
+        </div>
+        <div class="projects">
+            <h2>Skills</h2>
+            <p>✅ AI & Machine Learning (TensorFlow, OpenCV, GPT Models)</p>
+            <p>✅ Web & Mobile Development (React Native, Node.js, Firebase)</p>
+            <p>✅ Cloud Computing & Blockchain (AWS, Google Cloud, Hyperledger)</p>
+        </div>
+        <button class="btn" onclick="alert('Welcome to my sci-fi world!')">Explore More</button>
+    </div>
+    <div class="footer">
+        <p>&copy; 2025 Muhammad Usman (SP2-BCS-036)</p>
+    </div>
+</body>
+</html>
